@@ -9,15 +9,20 @@ function searchResult(){
 let index=1;
 
 const fetchAsync = async (index) => {
-    let rawData = await fetch(`http://localhost:3000/google/${index}`)
-    let googleData = await rawData.json();
+    const rawData = await fetch(`http://localhost:3000/google/${index}`)
+    const googleData = await rawData.json();
     console.log(googleData);   
 
     const resultList = document.getElementById('list');
     resultList.innerHTML = "";
+
     for(let i=1; i<11; i++){
+        let rawData2 = await fetch(`http://localhost:3000/google/${i}`)
+        let googleData2 = await rawData2.json();
+        console.log(googleData2);
+
         let li = document.createElement('li');
-        li.textContent = googleData.url;
+        li.textContent = googleData2.url;
         resultList.appendChild(li); 
 }
 }
