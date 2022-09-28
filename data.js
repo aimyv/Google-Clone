@@ -57,3 +57,5 @@ const search = [
     {item:'koala',
         results: []}
 ]
+
+module.exports = search
