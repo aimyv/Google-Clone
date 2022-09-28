@@ -160,4 +160,4 @@ const google = [
         ]}
 ]
 
-module.exports = search
+module.exports = google
