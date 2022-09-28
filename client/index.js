@@ -21,17 +21,18 @@ const fetchAsync = async (index) => {
         let googleData2 = await rawData2.json();
         console.log(googleData2);
  
-        // let div = document.createElement('div')
-        // div.className = `div${i}`
+        let div = document.createElement('div')
+        div.className = `div${i}`
         
         let li = document.createElement('li');
         li.textContent = googleData2.breadcrumb
         li.className = "breadCrumb"
         resultList.appendChild(li); 
 
-        let li2 = document.createElement('li');
-        li2.textContent = googleData2.url;
-        li2.className = "url"
+        let li2 = document.createElement('a');
+        li2.textContent = googleData2.title;
+        li2.className = "title"
+        li2.href = googleData2.url
         resultList.appendChild(li2); 
 
         let li3 = document.createElement('li');
