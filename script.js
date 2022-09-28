@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
 
 // ################################ Google ################################
 app.get('/google', (req, res) => {
-    res.send(google)
+    res.send(search)
 })
 
 app.get('/google/:id', (req, res) => {
@@ -23,35 +23,7 @@ app.listen(port, () => {
 })
 
 module.exports = app
-// // ######################################## Turtle ########################################
-// app.get('/turtle', (req, res) => {
-//     res.send(turtle)
-// })
 
-// app.get('/turtle/:id', (req, res) => {
-//     const id = parseInt(req.params.id) - 1;
-//     res.send(turtle[id])
-// })
-
-// // ######################################## Tiger ########################################
-// app.get('/tiger', (req, res) => {
-//     res.send(tiger)
-// })
-
-// app.get('/tiger/:id', (req, res) => {
-//     const id = parseInt(req.params.id) - 1;
-//     res.send(tiger[id])
-// })
-
-// // ######################################## Koala ########################################
-// app.get('/koala', (req, res) => {
-//     res.send(koala)
-// })
-
-// app.get('/koala/:id', (req, res) => {
-//     const id = parseInt(req.params.id) - 1;
-//     res.send(koala[id])
-// })
 
 
 
