@@ -14,14 +14,14 @@ class SearchItem {
         return searches;
     }
 
-    // static findById(id){ // /google/turtle
-    //     const sData = data.filter((search) => search.item === item)[0];
-    //     if (!sData){
-    //         return;
-    //     }
-    //     const search = new SearchItem(sData.results);
-    //     return search;
-    // }
+    static findById(id){ // /google/turtle
+        const sData = data.filter((search) => search.id == id)[0];
+        if (!sData){
+            return;
+        }
+        const search = new SearchItem(sData);
+        return search;
+    }
 
 }
 
