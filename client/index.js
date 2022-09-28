@@ -16,7 +16,6 @@ const fetchAsync = async (index) => {
     console.log(googleData);
 }
 
-
 async function append(input){
     let a = 1;
     let b = 11;
@@ -86,8 +85,18 @@ form.addEventListener('submit', (e) => {
     }
 })
 
-document.getElementById('submitButton2').onclick = function() {
-    console.log('testing click')
+const randomFetch = async (item) => {
+    const randData = await fetch(`http://localhost:3000/google/random/${item}`)
+    const randomData = await randData.json();
+    console.log(randomData)
+}
+
+async function randomWebsite(){
+    let rawData3 = await fetch(`http://localhost:3000/google/random`)
+    let googleData3 = await rawData3.json();
+    console.log(googleData3);
+
+    window.location.href = googleData3.url
 }
 
 fetchAsync(index).catch(err => console.log(err));
