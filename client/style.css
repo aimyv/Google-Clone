@@ -8,16 +8,17 @@ html {
   }
 
   #centerPage {
-
-    position: absolute;
-    top: 40%;
+    top: 40%; 
     left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
+    margin-top: 15%;
+    margin-right: 0%;
     transition: .6s;
-    
   }
   
+  .content{
+    display: relative;
+  }
+
   #logo {
     display: 100%;
     height: 92px;
@@ -34,12 +35,13 @@ html {
   #search_bar {
     border-radius: 40px;
     width: 585px;
-    margin: auto;
+    /* margin: auto; */
     height: 39px;
     border: .7px solid #acacac;
     background-color: #fff;
     box-shadow:0px 1px 4px #E4E4E4;
     margin-bottom: 20px;
+    margin-left: 35%;
     outline: none;
     text-indent: 15px;
   }
@@ -53,7 +55,10 @@ html {
     outline: none;
   }
 
-  
+.search_buttons{
+  margin-left: 22.5%;
+}
+
 .submit_buttons {
     display: inline-block;
     height: 36px;
@@ -85,3 +90,36 @@ html {
     color: #000;
     box-shadow:0px 1px 4px #E4E4E4;
   }
+
+  /* Search results */
+
+.websites{
+  margin-left: 150px;
+  font-family: arial;
+}
+
+#divResult{
+  margin-left: 8px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.title{
+  font-size: 19px;
+    line-height: 18px;
+    font-weight: normal;
+    color: rgb(29, 1, 189);
+    margin-bottom: 0px;
+    margin-top: 25px;
+}
+
+.breadCrumb{
+  font-size: 14px;
+    line-height: 14px;
+    color: green;
+    margin-bottom: 0px;
+}
+
+li{
+  list-style-type: none;
+}
