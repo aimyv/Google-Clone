@@ -23,22 +23,26 @@ const fetchAsync = async (index) => {
  
         let div = document.createElement('div')
         div.className = `div${i}`
+        resultList.appendChild(div)
         
         let li = document.createElement('li');
         li.textContent = googleData2.breadcrumb
         li.className = "breadCrumb"
-        resultList.appendChild(li); 
+        div.appendChild(li); 
 
         let li2 = document.createElement('a');
         li2.textContent = googleData2.title;
         li2.className = "title"
         li2.href = googleData2.url
-        resultList.appendChild(li2); 
+        div.appendChild(li2); 
 
         let li3 = document.createElement('li');
         li3.textContent = googleData2.description
         li3.className = "description"
-        resultList.appendChild(li3); 
+        div.appendChild(li3); 
+
+        let gap = document.createElement('br')
+        div.appendChild(gap)
 }
 }
 
