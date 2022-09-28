@@ -6,19 +6,42 @@ function searchResult(){
     document.getElementById("submitButton1").style.display = "none";
     document.getElementById("submitButton2").style.display = "none";
 }
-// Testing :
-// const fetchAsync = async (index) => {
-//     const rawData = await fetch(`http://localhost:3000/google/${index}`);
-//     const googleData = await rawData.json();
-//     console.log(googleData)}
+let index=1;
+
+const fetchAsync = async (index) => {
+    let rawData = await fetch(`http://localhost:3000/google/${index}`)
+    let googleData = await rawData.json();
+    console.log(googleData);   
+
+    const resultList = document.getElementById('list');
+    resultList.innerHTML = "";
+    for(let i=1; i<11; i++){
+        let li = document.createElement('li');
+        li.textContent = googleData.url;
+        resultList.appendChild(li); 
+}
+}
 
 
-// const sendToPage = async (index) => {
-//     var input = document.getElementById("search_form").value;
-//     const turtleData = await fetch(`https://localhost:3000/${googleData.item.url}`);
-//     const turtleDataJson = await turtleData.json();
-//     for(let i=0; i<turtleDataJson.length; i++){
-//         let searchItem = document.createElement('li');
-//         searchItem.textContent = turtleDataJson.item.url
+fetchAsync(index).catch(err => console.log(err));
+
+const btn = document.getElementById('submitButton1');
+
+// btn.addEventListener('click', () => {
+//     const resultList = document.getElementById('divResult');
+//     resultList.innerHTML = "";
+//         for(let i=0; i<10; i++){
+//             let li = document.createElement('li');
+//             li.textContent = googleData.url[i];
+//             resultList.appendChild(li);
 //     }
+// })
+
+
+
+// const input = document.getElementById("search_bar");
+
+// function searchFunction(){
+    
 // }
+
