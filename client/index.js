@@ -104,6 +104,8 @@ searchBar.addEventListener('keyup', (e) => {
     } else if(e.target.value == 'koala'){
         clear()
         append('koala')
+    } else if(e.target.value == ''){
+        clear()
     } else{
         return console.log(`Search query for ${e.target.value} does not exist yet`)
     }
