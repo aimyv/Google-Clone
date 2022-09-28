@@ -10,9 +10,9 @@ router.get('/', (req, res) => {
 router.get('/:item', (req, res) => {
     try {
         const searchItem = req.params.item;
-        const selectedSearch = Pokemon.findById(searchItem);
+        const selectedSearch = Search.findById(searchItem);
         if (!selectedSearch) {
-            throw new Error('This pokemon does not exist!')
+            throw new Error('This search does not exist!')
         }
         res.send(selectedSearch);
     } catch (err) {
