@@ -13,17 +13,31 @@ const fetchAsync = async (index) => {
     const googleData = await rawData.json();
     console.log(googleData);   
 
-    const resultList = document.getElementById('list');
+    const resultList = document.getElementById('divResult');
     resultList.innerHTML = "";
 
     for(let i=1; i<11; i++){
         let rawData2 = await fetch(`http://localhost:3000/google/${i}`)
         let googleData2 = await rawData2.json();
         console.log(googleData2);
-
+ 
+        // let div = document.createElement('div')
+        // div.className = `div${i}`
+        
         let li = document.createElement('li');
-        li.textContent = googleData2.url;
+        li.textContent = googleData2.breadcrumb
+        li.className = "breadCrumb"
         resultList.appendChild(li); 
+
+        let li2 = document.createElement('li');
+        li2.textContent = googleData2.url;
+        li2.className = "url"
+        resultList.appendChild(li2); 
+
+        let li3 = document.createElement('li');
+        li3.textContent = googleData2.description
+        li3.className = "description"
+        resultList.appendChild(li3); 
 }
 }
 
