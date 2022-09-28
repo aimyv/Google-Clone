@@ -7,12 +7,23 @@ router.get('/', (req, res) => {
     res.send(search)
 })
 
+router.get('/random', (req, res) => {
+    try {
+        const num = Math.floor(Math.random() * 30);
+        const selectedSearch = SearchItem.findById(num);
+        res.send(selectedSearch);
+    } catch(err) {
+        console.log(err);
+        res.status(404).send({message: err.message});
+    }
+})
+
 router.get('/:id', (req, res) => {
     try {
         const searchItem = parseInt(req.params.id);
         const selectedSearch = SearchItem.findById(searchItem);
-        if (!selectedSearch) {
-            throw new Error('This search does not exist!')
+        if (searchItem < 1 || searchItem > 30) {
+            throw new Error('Choose a number between 1 and 30.')
         }
         res.send(selectedSearch);
     } catch (err) {

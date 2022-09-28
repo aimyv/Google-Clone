@@ -14,7 +14,7 @@ class SearchItem {
         return searches;
     }
 
-    static findById(id){ // /google/turtle
+    static findById(id){
         const sData = data.filter((search) => search.id == id)[0];
         if (!sData){
             return;
