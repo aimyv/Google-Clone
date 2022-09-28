@@ -48,8 +48,17 @@ const fetchAsync = async (index) => {
 }
 
 
-async function append(){
-    for(let i=1; i<11; i++){
+async function append(input){
+    let a = 1;
+    let b = 11;
+    if (input === 'tiger') {
+        a = 11;
+        b = 21;
+    } else if (input === 'koala') {
+        a = 21;
+        b = 31;
+    }
+    for(let i=a; i<b; i++){
         let rawData2 = await fetch(`http://localhost:3000/google/${i}`)
         let googleData2 = await rawData2.json();
         console.log(googleData2);
@@ -76,15 +85,26 @@ async function append(){
 
         let gap = document.createElement('br')
         div.appendChild(gap)
+    }
 }
+
+async function clear() {
+    resultList.innerHTML = '';
 }
 
 const searchBar = document.getElementById('search_bar')
 searchBar.addEventListener('keyup', (e) => {
     console.log(e.target.value);
     if(e.target.value == 'turtle'){
-        append()
-    }else{
+        clear()
+        append('turtle')
+    } else if(e.target.value == 'tiger'){
+        clear()
+        append('tiger')
+    } else if(e.target.value == 'koala'){
+        clear()
+        append('koala')
+    } else{
         return console.log(`Search query for ${e.target.value} does not exist yet`)
     }
 })
