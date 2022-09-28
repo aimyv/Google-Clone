@@ -86,6 +86,10 @@ form.addEventListener('submit', (e) => {
     }
 })
 
+document.getElementById('submitButton2').onclick = function() {
+    console.log('testing click')
+}
+
 fetchAsync(index).catch(err => console.log(err));
 
 const btn = document.getElementById('submitButton1');
