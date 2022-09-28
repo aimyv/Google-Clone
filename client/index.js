@@ -79,10 +79,13 @@ async function append(){
 }
 }
 
-const searchBar = document.getElementById('search_bar')
-searchBar.addEventListener('keyup', (e) => {
+const form = document.getElementById('search_form')
+
+form.addEventListener('submit', (e) => {
     console.log(e.target.value);
-    if(e.target.value == 'turtle'){
+    const searchQuery = document.getElementById('search_bar').value
+    console.log(searchBar)
+    if(searchQuery == 'turtle'){
         append()
     }else{
         return console.log(`Search query for ${e.target.value} does not exist yet`)
