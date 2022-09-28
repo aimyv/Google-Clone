@@ -9,14 +9,17 @@ server.get('/', (req, res) => {
     res.send('Testing Lap1 Group exercise')
 })
 
-server.get('/google', (req, res) => {
-    res.send(google)
-})
+// server.get('/google', (req, res) => {
+//     res.send(google)
+// })
 
-server.get('/google/:id', (req, res) => {
-    const id = parseInt(req.params.id) - 1;
-    res.send(turtle[id])
-})
+// server.get('/google/:id', (req, res) => {
+//     const id = parseInt(req.params.id) - 1;
+//     res.send(turtle[id])
+// })
+
+const searchRoutes = require('./controllers/searches');
+server.use('/google', searchRoutes);
 
 module.exports = server
 // // ######################################## Turtle ########################################

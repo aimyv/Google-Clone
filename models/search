@@ -1,0 +1,25 @@
+const data = require('../data');
+
+class SearchItem {
+    constructor(data) {
+        this.item = data.item;
+        this.results = data.results;
+    }
+
+    static get all() {
+        const searches = data.map((search) => new SearchItem(search))
+        return searches;
+    }
+
+    static findById(item){
+        const sData = data.filter((search) => searche.item == item)[0];
+        if (!sData){
+            return;
+        }
+        const search = new SearchItem(sData);
+        return search;
+    }
+
+}
+
+module.exports = SearchItem;
