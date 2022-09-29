@@ -68,20 +68,28 @@ form.addEventListener('submit', (e) => {
     e.preventDefault()
     console.log(e.target.value);
     const searchQuery = document.getElementById('search_bar').value
-    console.log(searchQuery)
-    if(searchQuery == 'turtle'){
+
+    const filter = /[^A-Za-z]/g;
+    const filteredQuery = searchQuery.replace(filter, '');
+    const match = /turtle|tiger|koala/i;
+    const search = filteredQuery.toLowerCase()
+    if(!match.test(filteredQuery)) {
+        alert('Search for "turtle", "tiger", or "koala"')
+    }
+
+    if(search == 'turtle'){
         clear()
         append('turtle')
-    } else if(searchQuery == 'tiger'){
+    } else if(search == 'tiger'){
         clear()
         append('tiger')
-    } else if(searchQuery == 'koala'){
+    } else if(search == 'koala'){
         clear()
         append('koala')
-    } else if(searchQuery == ''){
+    } else if(search == ''){
         clear()
     } else{
-        return console.log(`Search query for ${searchQuery} does not exist yet`)
+        return console.log(`Search query for ${search} does not exist yet`)
     }
 })
 
