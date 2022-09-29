@@ -7,7 +7,7 @@ html {
     font: 13px arial;
   }
 
-  tbody{
+  /* tbody{
     display: table;
  
     width: 100%;
@@ -15,51 +15,51 @@ html {
 
   tr td{
     padding: 0px 40px;
-    /* border: 1px solid black; */
+    border: 1px solid black;
     display: block;
     text-align: center;
     margin-left: 50%;
     padding-right: 600px;
-  }
+  } */
 
-  #submitButton1{
+  /* #submitButton1{
     float: left;
-    padding-left: 180px;
-  }
+    margin-left: 155px;
+  } */
 
-  hr{
+  /* hr{
     display: none;
-  }
+  } */
 
-  #centerPage {
+  /* #centerPage {
     top: 40%; 
     left: 50%;
     margin-top: 15%;
     margin-right: 0%;
     transition: .6s;
-  }
+  } */
   
   .content{
     display: relative;
   }
 
-  #logo {
+  /* #logo {
     display: 100%;
     height: 92px;
     width: 272px;
     display: block;
     margin: auto;
-  }
+  } */
   
   .form {
     display: block;
     margin: auto;
   }
   
-  #search_bar {
+  /* #search_bar {
     border-radius: 40px;
     width: 585px;
-    /* margin: auto; */
+    margin: auto;
     height: 39px;
     border: .7px solid #acacac;
     background-color: #fff;
@@ -67,10 +67,10 @@ html {
     margin-bottom: 20px;
     margin-left: 35%;
     outline: none;
-    text-indent: 15px;
-  }
+      text-indent: 15px;
+    } */
   
-  #search_bar:hover, #search_bar:active {
+  /* #search_bar:hover, #search_bar:active {
     padding-bottom: 2px;
     padding-top: 1px;
     margin-top: -1px;
@@ -81,9 +81,9 @@ html {
 
 .search_buttons{
   margin-left: 22.5%;
-}
+} */
 
-.submit_buttons {
+/* .submit_buttons {
     display: inline-block;
     height: 36px;
     cursor: pointer;
@@ -100,20 +100,20 @@ html {
     min-width: 54px;
     padding: 0 16px;
     text-align: center;
-  }
+  } */
   
-  .submit_buttons {
+  /* .submit_buttons {
     position: relative;
     left: 25%;
     right: -50%;
     cursor: pointer;
-  }
+  } */
   
-  .submit_buttons:hover {
+  /* .submit_buttons:hover {
     border: .7px solid #d0d0d0;
     color: #000;
     box-shadow:0px 1px 4px #E4E4E4;
-  }
+  } */
 
   /* Search results */
 
@@ -146,4 +146,83 @@ html {
 
 li{
   list-style-type: none;
+}
+
+/* ########################################################### */
+
+#search_form{
+  display: table-cell;
+  width: 15%;
+}
+
+#logo{
+  float: left;
+  display: block;
+  width: 150px;
+  margin-top: 22px;
+  margin-left: 15px;
+}
+
+#logo:hover{
+  cursor: pointer;
+}
+
+#centerPage{
+  display: inline-block;
+}
+
+#search_bar {
+  border-radius: 40px;
+  width: 585px;
+  /* margin: auto; */
+  height: 39px;
+  border: .7px solid #acacac;
+  background-color: #fff;
+  box-shadow:0px 1px 4px #E4E4E4;
+  /* margin-bottom: 20px;
+  margin-left: 35%; */
+  outline: none;
+  text-indent: 15px;
+  float: right;
+  margin-left: 50px;
+}
+
+#search_bar:hover, #search_bar2:active {
+  padding-bottom: 2px;
+  padding-top: 1px;
+  margin-top: -1px;
+  width: 585px;
+  box-shadow:0px 3px 8px #E4E4E4;
+  outline: none;
+}
+
+.search_buttons{
+  float: right;
+/* margin-left: 22.5%; */
+}
+
+.submit_buttons {
+  /* display: inline-block; */
+  height: 36px;
+  cursor: pointer;
+  line-height: 27px;
+  background-color: #f2f2f2;
+  border: 1px solid #f2f2f2;
+  border-radius: 2px;
+  color: #757575;
+  cursor: default;
+  font-family: arial,sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  margin: 11px 4px;
+  min-width: 54px;
+  padding: 0 16px;
+  text-align: center; 
+  cursor: pointer;
+}
+
+.submit_buttons:hover {
+  border: .7px solid #d0d0d0;
+  color: #000;
+  box-shadow:0px 1px 4px #E4E4E4;
 }
