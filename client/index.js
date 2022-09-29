@@ -79,23 +79,17 @@ form.addEventListener('submit', (e) => {
 
     // checks user has searched for any of the three terms and alerts them if not
     const search = filteredQuery.toLowerCase()
-    if(search === 'turtle' && searchCount === 1){
-        append('turtle')
-    } else if(search === 'tiger' && searchCount === 1){
-        append('tiger')
-    } else if(search === 'koala' && searchCount === 1){
-        append('koala')
-    } else if(search === 'turtle' && randomCount === 1){
-        randomFetch('turtle')
-    } else if(search === 'tiger' && randomCount === 1){
-        randomFetch('tiger')
-    } else if(search === 'koala' && randomCount === 1){
-        randomFetch('koala')
+    const match = /turtle|tiger|koala/;
+    if(match.test(search) && searchCount === 1) {
+        append(search)
+    } else if (match.test(search) && randomCount === 1) {
+        randomFetch(search)
     } else if(search === '' && randomCount === 1) {
         randomWebsite()
     } else{
         alert(`Search query for ${searchQuery} does not exist yet. Search for "turtle", "tiger", or "koala" instead.`)
     }
+    
     clear()
     searchCount = 0
     randomCount = 0
