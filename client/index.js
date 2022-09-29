@@ -101,6 +101,10 @@ form.addEventListener('submit', (e) => {
 })
 
 const randomFetch = async (item) => {
+    let matches = ['turtle', 'tiger', 'koala'];
+    if(!(item in matches)) {
+        alert(`Search query for ${item} does not exist yet. Search for "turtle", "tiger", or "koala" instead.`)
+    }
     const randData = await fetch(`http://localhost:3000/google/random/${item}`)
     const randomData = await randData.json();
     console.log(randomData)
