@@ -1,12 +1,7 @@
-function changeClass(){
-    // console.log('testing')
-    // document.getElementById("centerPage").style.top = "10%";
-    // document.getElementById("centerPage").style.marginTop = "5%";
-    // className.tog
-    // document.getElementById("search_bar").style.display = "none";
-    // document.getElementById("submitButton1").style.display = "none";
-    // document.getElementById("submitButton2").style.display = "none";
+function iconRefresh(){
+    location.reload()
 }
+
 let index=1;
 const resultList = document.getElementById('divResult');
 resultList.innerHTML = "";
