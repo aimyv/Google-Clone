@@ -85,13 +85,14 @@ form.addEventListener('submit', (e) => {
         append('tiger')
     } else if(search === 'koala' && searchCount === 1){
         append('koala')
-    } else if(search === ''){
     } else if(search === 'turtle' && randomCount === 1){
         randomFetch('turtle')
     } else if(search === 'tiger' && randomCount === 1){
         randomFetch('tiger')
     } else if(search === 'koala' && randomCount === 1){
         randomFetch('koala')
+    } else if(search === '' && randomCount === 1) {
+        randomWebsite()
     } else{
         alert(`Search query for ${searchQuery} does not exist yet. Search for "turtle", "tiger", or "koala" instead.`)
     }
