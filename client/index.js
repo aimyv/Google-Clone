@@ -13,14 +13,19 @@ const fetchAsync = async (index) => {
 }
 
 async function append(input){
-    let a = 1;
-    let b = 11;
-    if (input === 'tiger') {
+    let a;
+    let b;
+    if (input === 'turtle') {
+        a = 1;
+        b = 11;
+    } else if (input === 'tiger') {
         a = 11;
         b = 21;
     } else if (input === 'koala') {
         a = 21;
         b = 31;
+    } else {
+        alert(`Search query for ${input} does not exist yet. Search for "turtle", "tiger", or "koala" instead.`)
     }
     for(let i=a; i<b; i++){
         let rawData2 = await fetch(`http://localhost:3000/google/${i}`)
