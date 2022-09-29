@@ -8,22 +8,23 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="../assets/favicon.png">
     <script defer src="index.js"></script>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 </head>
 <body>
   <div class="content">
       <div class="centerPage" id="centerPage">
-          <img id="logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google logo" />
+          <img id="logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google logo" onclick = "iconRefresh()" />
           <br>
           <form id="search_form" >
             <table>
                 <tr>
                     <td>
-                        <input type="search" id="search_bar" placeholder="Search for 'koala', 'tiger' or 'turtle' or submit nothing to clear results"></input>
+                        <input type="search" id="search_bar" placeholder="Search for 'koala', 'tiger' or 'turtle' or submit nothing to clear results "></input>
                     </td>
 
                     <td>
                         <div class="search_buttons" >
-                        <input class="submit_buttons" type="submit" value="Google Search" id="submitButton1" onclick = "changeClass()">
+                        <input class="submit_buttons" type="submit" value="Google Search" id="submitButton1">
                         <input class="submit_buttons" type="submit" value="I'm Feeling Lucky" name="feelinglucky" id="submitButton2" onclick="randomWebsite()"></input>
                         </div>
                     </td>
