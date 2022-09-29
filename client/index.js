@@ -77,7 +77,7 @@ form.addEventListener('submit', (e) => {
     const match = /turtle|tiger|koala/i;
     const search = filteredQuery.toLowerCase()
     if(!match.test(filteredQuery) && search !== '') {
-        alert('Search for "turtle", "tiger", or "koala"')
+        alert(`Search query for ${searchQuery} does not exist yet. Search for "turtle", "tiger", or "koala" instead.`)
     }
 
     if(search === 'turtle'){
@@ -92,7 +92,7 @@ form.addEventListener('submit', (e) => {
     } else if(search === ''){
         clear()
     } else{
-        return console.log(`Search query for ${search} does not exist yet`)
+        return console.log(`Search query for ${search} does not exist yet.`);
     }
 })
 
