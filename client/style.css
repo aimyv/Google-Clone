@@ -239,3 +239,10 @@ footer{
     margin-left: 30%;
   }
 }
+
+@media only screen and (max-width:400px){
+  #search_bar{
+    margin-left: 5px;
+  }
+}
+
