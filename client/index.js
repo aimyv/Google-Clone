@@ -60,6 +60,14 @@ async function clear() {
 
 const form = document.getElementById('search_form')
 
+const btn1 = document.getElementById('submitButton1')
+const btn2 = document.getElementById('submitButton2')
+let searchCount = 0;
+let randomCount = 0;
+
+btn1.addEventListener('click', () => searchCount++)
+btn2.addEventListener('click', () => randomCount++)
+
 form.addEventListener('submit', (e) => {
     e.preventDefault()
     console.log(e.target.value);
@@ -69,28 +77,35 @@ form.addEventListener('submit', (e) => {
     const filter = /[^A-Za-z]/g; 
     const filteredQuery = searchQuery.replace(filter, '');
 
-    // checks whether user has searched for any of the three terms and alerts them if not
+    // checks user has searched for any of the three terms and alerts them if not
     const search = filteredQuery.toLowerCase()
-    if(search === 'turtle'){
-        clear()
+    if(search === 'turtle' && searchCount === 1){
         append('turtle')
-    } else if(search === 'tiger'){
-        clear()
+    } else if(search === 'tiger' && searchCount === 1){
         append('tiger')
-    } else if(search === 'koala'){
-        clear()
+    } else if(search === 'koala' && searchCount === 1){
         append('koala')
     } else if(search === ''){
-        clear()
+    } else if(search === 'turtle' && randomCount === 1){
+        randomFetch('turtle')
+    } else if(search === 'tiger' && randomCount === 1){
+        randomFetch('tiger')
+    } else if(search === 'koala' && randomCount === 1){
+        randomFetch('koala')
     } else{
         alert(`Search query for ${searchQuery} does not exist yet. Search for "turtle", "tiger", or "koala" instead.`)
     }
+    clear()
+    searchCount = 0
+    randomCount = 0
 })
 
 const randomFetch = async (item) => {
     const randData = await fetch(`http://localhost:3000/google/random/${item}`)
     const randomData = await randData.json();
     console.log(randomData)
+
+    window.location.href = randomData.url
 }
 
 async function randomWebsite(){
