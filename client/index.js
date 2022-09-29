@@ -101,7 +101,7 @@ form.addEventListener('submit', (e) => {
 })
 
 const randomFetch = async (item) => {
-    let matches = ['turtle', 'tiger', 'koala'];
+    const matches = ['turtle', 'tiger', 'koala'];
     if(!(item in matches)) {
         alert(`Search query for ${item} does not exist yet. Search for "turtle", "tiger", or "koala" instead.`)
     }
