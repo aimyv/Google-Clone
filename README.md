@@ -1,4 +1,4 @@
-# LAP 1 CODE CHALLENGE
+# Google Clone - Lap 1 Code Challenge
 
 ## Installation
 
