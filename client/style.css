@@ -7,6 +7,30 @@ html {
     font: 13px arial;
   }
 
+  tbody{
+    display: table;
+ 
+    width: 100%;
+  }
+
+  tr td{
+    padding: 0px 40px;
+    /* border: 1px solid black; */
+    display: block;
+    text-align: center;
+    margin-left: 50%;
+    padding-right: 600px;
+  }
+
+  #submitButton1{
+    float: left;
+    padding-left: 180px;
+  }
+
+  hr{
+    display: none;
+  }
+
   #centerPage {
     top: 40%; 
     left: 50%;
