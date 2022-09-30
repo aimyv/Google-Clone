@@ -24,9 +24,7 @@ async function append(input){
     } else if (input === 'koala') {
         a = 21;
         b = 31;
-    } else {
-        alert(`Search query for ${input} does not exist yet. Search for "turtle", "tiger", or "koala" instead.`)
-    }
+    } 
     for(let i=a; i<b; i++){
         let rawData2 = await fetch(`http://localhost:3000/google/${i}`)
         let googleData2 = await rawData2.json();
@@ -84,10 +82,10 @@ form.addEventListener('submit', (e) => {
 
     // checks user has searched for any of the three terms and alerts them if not
     const search = filteredQuery.toLowerCase()
-    const match = /turtle|tiger|koala/;
-    if(match.test(search) && searchCount === 1) {
+    const match = (search === 'turtle') || (search === 'tiger') || (search === 'koala');
+    if(match && searchCount === 1) {
         append(search)
-    } else if (match.test(search) && randomCount === 1) {
+    } else if (match && randomCount === 1) {
         randomFetch(search)
     } else if(search === '' && randomCount === 1) {
         randomWebsite()
@@ -101,10 +99,6 @@ form.addEventListener('submit', (e) => {
 })
 
 const randomFetch = async (item) => {
-    const matches = ['turtle', 'tiger', 'koala'];
-    if(!(item in matches)) {
-        alert(`Search query for ${item} does not exist yet. Search for "turtle", "tiger", or "koala" instead.`)
-    }
     const randData = await fetch(`http://localhost:3000/google/random/${item}`)
     const randomData = await randData.json();
     console.log(randomData)
