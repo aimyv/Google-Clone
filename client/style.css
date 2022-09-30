@@ -164,6 +164,9 @@ footer{
   .websites{
     margin-left: 100px;
   }
+  #search_bar:hover, #search_bar2:active {
+    width: 400px;
+  }
 }
 
 @media only screen and (max-width:1030px){
@@ -173,12 +176,21 @@ footer{
   .websites{
     margin-left: 60px;
   }
+
+  #search_bar:hover, #search_bar2:active {
+    width: 200px;
+  }
 }
 
 @media only screen and (max-width:830px){
   #search_bar {
     width: 150px;
   }
+
+  #search_bar:hover, #search_bar2:active {
+    width: 150px;
+  }
+
   .websites{
     margin-left: 30px;
   }
@@ -194,6 +206,11 @@ footer{
   #search_bar {
     width: 300px;
   }
+
+  #search_bar:hover, #search_bar2:active {
+    width: 300px;
+  }
+
   .websites{
     margin-left: 30px;
   }
@@ -231,6 +248,11 @@ footer{
   #search_bar {
     width: 200px;
   }
+
+  #search_bar:hover, #search_bar2:active {
+    width: 200px;
+  }
+
 }
 
 @media only screen and (max-width:560px){
