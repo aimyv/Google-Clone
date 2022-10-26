@@ -147,6 +147,7 @@ li{
 
 .menu:hover{
   color: #1aa260;
+  cursor: pointer;
 }
 
 footer{
