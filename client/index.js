@@ -1,3 +1,4 @@
+// Deployed backend: https://google-clone-99dk.onrender.com
 function iconRefresh(){
     location.reload()
 }
@@ -7,7 +8,8 @@ const resultList = document.getElementById('divResult');
 resultList.innerHTML = "";
 
 const fetchAsync = async (index) => {
-    const rawData = await fetch(`http://localhost:3000/google/${index}`)
+    // const rawData = await fetch(`http://localhost:3000/google/${index}`)
+    const rawData = await fetch(`https://google-clone-99dk.onrender.com/google/${index}`)
     const googleData = await rawData.json();
     console.log(googleData);
 }
@@ -26,7 +28,8 @@ async function append(input){
         b = 31;
     } 
     for(let i=a; i<b; i++){
-        let rawData2 = await fetch(`http://localhost:3000/google/${i}`)
+        // let rawData2 = await fetch(`http://localhost:3000/google/${i}`)
+        let rawData2 = await fetch(`https://google-clone-99dk.onrender.com/google/${i}`)
         let googleData2 = await rawData2.json();
         console.log(googleData2);
 
@@ -99,7 +102,8 @@ form.addEventListener('submit', (e) => {
 })
 
 const randomFetch = async (item) => {
-    const randData = await fetch(`http://localhost:3000/google/random/${item}`)
+    // const randData = await fetch(`http://localhost:3000/google/random/${item}`)
+    const randData = await fetch(`https://google-clone-99dk.onrender.com/google/random/${item}`)
     const randomData = await randData.json();
     console.log(randomData)
 
@@ -107,7 +111,8 @@ const randomFetch = async (item) => {
 }
 
 async function randomWebsite(){
-    let rawData3 = await fetch(`http://localhost:3000/google/random`)
+    // let rawData3 = await fetch(`http://localhost:3000/google/random`)
+    let rawData3 = await fetch(`https://google-clone-99dk.onrender.com/google/random`)
     let googleData3 = await rawData3.json();
     console.log(googleData3);
 
