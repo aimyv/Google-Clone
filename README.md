@@ -15,16 +15,18 @@ This application is an imitation of the Google Search Console. Users can search 
 - If the console is empty, and you click 'Get Lucky', it will retrieve a random result. Else, it will retrieve a random result that is relevant to the query.
 - If your search doesn't match any search query, an alert is displayed instructing you to search for either 'turtle', 'tiger' or 'koala'.
 
-# Local Host (deprecated)
+---
 
-## Installation (local host)
+## Local Host (deprecated)
+
+### Installation (local host)
 
 - Clone or download this repo
 - Open your terminal
 - Make sure you are in the `lap1-code-challenge` directory
 - Install the node modules with `npm install`
 
-## Usage (local host)
+### Usage (local host)
 
 - Run `npm run dev` to launch the server.
 - <a href="http://localhost:3000/" target="_blank">Access</a> the backend.
