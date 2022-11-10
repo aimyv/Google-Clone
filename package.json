@@ -1,0 +1,29 @@
+{
+  "name": "lap1-code-challenge",
+  "version": "1.0.0",
+  "description": "## Installation",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon script.js"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aimyv/lap1-code-challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aimyv/lap1-code-challenge/issues"
+  },
+  "homepage": "https://github.com/aimyv/lap1-code-challenge#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

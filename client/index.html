@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.png">
+    <script defer src="index.js"></script>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+<body>
+  <div class="content">
+      <div class="centerPage" id="centerPage">
+          <img id="logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google logo" onclick = "iconRefresh()" />
+          <br>
+          <form id="search_form" >
+            <table>
+                <tr>
+                    <td>
+                        <input type="search" id="search_bar" placeholder="Search for 'koala', 'tiger' or 'turtle' or submit nothing to clear results "></input>
+                    </td>
+
+                    <td>
+                        <div class="search_buttons" >
+                        <input class="submit_buttons" type="submit" value="Google Search" id="submitButton1">
+                        <input class="submit_buttons" type="submit" value="I'm Feeling Lucky" name="feelinglucky" id="submitButton2"></input>
+                        </div>
+                    </td>
+                </tr>
+            </table>  
+            </form>
+            <div class="icons">
+              <i class="uil uil-setting menu"></i>
+              <i class="uil uil-apps menu"></i>
+            </div>
+      </div>
+
+      <hr>
+
+      <br>
+
+    <div class="websites">
+      <div id="divResult">
+      </div> 
+    </div>
+    
+</body>
+</html>
